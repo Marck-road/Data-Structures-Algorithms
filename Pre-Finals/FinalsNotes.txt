@@ -1,0 +1,67 @@
+//heapify
+
+while(flag)
+    flag = 0;
+
+    for(i = size of arr, i>=0; i--){
+
+        pick an x
+
+        if(i * 2 <= size){
+            if(i * 2 + 1 > size)
+                x = i*2;
+
+            else
+                x = (arr[i*2] > arr[i*2+1]) ? i*2 : i*2+1;
+            
+            if(arr[x] > arr[i]){
+                temp = arr[i]
+                arr[i] = arr[x]
+                arr[x] = temp
+                flag++;
+            }
+        }
+    }
+
+//delete
+
+temp = arr[1]
+arr[1] = arr[count]
+arr[count] = temp
+count--;
+
+heapify (to in order it)
+
+//add
+
+arr[++count] = element
+
+for(i = count; i>0; i/=2){
+
+    if(arr[i] > arr[i/2]){
+        temp = arr[i]
+        arr[i] = arr[i/2]
+        arr[i/2] = temp
+    }
+
+
+}
+
+//view
+normal for loop
+
+
+
+Djisktra's
+- single source
+
+Floyd-Warshal
+- Shortest path between all Nodes
+
+Prim 
+- select any node as your root
+- slowly traverse by picking the shortest path
+
+Kruskal
+- start from the node with the shortest path
+- slowly increase until everything is connected
